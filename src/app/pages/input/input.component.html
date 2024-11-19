@@ -1,0 +1,38 @@
+<div class="container mb-4">
+    <div class="w-75">
+        <form [formGroup]="myForm">
+            <label for="title">
+                title:
+            </label>
+            <input     formControlName="title"
+            class="form-control mb-2"
+            id="title"
+            type="text">
+    <!--  -->
+          
+                 <div class="d-flex">
+                    <div class="mx-2">
+                        <label>
+                            true
+                           </label>
+                           <input type="radio" formControlName="completed" [value]="true"> 
+                     </div>
+                        <div class="mx-2">
+                          <label>
+                false
+              </label>
+              <input type="radio" formControlName="completed" [value]="false"> 
+         </div>
+                 </div>
+    <!--  -->   
+              <div class="mt-5">
+                <button (click)="reset()" type="button" class=" btn-danger btn mx-2 " style="color: white;">Reset</button>
+                @if(isUpdate){
+                    <button (click)="update()" type="button" class="btn-warning btn" style="color: white">Update</button>
+                } @else {
+                    <button (click)="post()" type="button" class="btn btn-success mx-2">Create</button>
+                }
+              </div>
+        </form>
+    </div>
+</div>

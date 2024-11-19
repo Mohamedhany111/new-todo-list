@@ -1,0 +1,9 @@
+<ul class="column-list">
+        @for(x of persons;track $index;let i =$index){
+<li>
+    {{x|names:i}}
+    
+</li>
+}
+</ul>
+<button class="btn btn-info" (click)="allData()">Add</button>
